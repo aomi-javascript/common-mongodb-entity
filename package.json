@@ -22,7 +22,11 @@
       "require": "./lib/review/*.js",
       "import": "./es/review/*.js"
     },
-    "package.json": "./package.json"
+    "package.json": "./package.json",
+    ".": {
+      "require": "./lib/review/index.js",
+      "import": "./es/review/index.js"
+    }
   },
   "scripts": {
     "build:mjs": "tsc",
@@ -34,7 +38,7 @@
     "prepare": "yarn build"
   },
   "dependencies": {
-    "@aomi/common-entity": "^1.0.2",
+    "@aomi/common-entity": "^1.0.3",
     "@nestjs/mongoose": "^9.2.0",
     "mongoose": "^6.5.4"
   },

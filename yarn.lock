@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@aomi/common-entity@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@aomi/common-entity/-/common-entity-1.0.2.tgz#6d12b5942d25f18a5a31104366cabc6e4ca9c5bc"
-  integrity sha512-DX2tDI8qn5WTCNqOE4+SxD2E6nXlrzCPt5NwNt7bZrgYgNJSolaeW9FF2Ws9HzdUtfZz8SGZJNR3CffDGwtUUw==
+"@aomi/common-entity@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@aomi/common-entity/-/common-entity-1.0.3.tgz#7679051fd29bc5185c409489eaa8f4183bbf1e2c"
+  integrity sha512-zTrEz0vQb+y+01nVPMzFdYI9qWQQrvzx49+F4Cwvr2d/zqeXR0YbEjeTaTjZ2ojosVXp9Alu9JOEwPuGgtgszw==
 
 "@babel/code-frame@^7.0.0":
   version "7.18.6"

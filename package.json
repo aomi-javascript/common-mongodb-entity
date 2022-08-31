@@ -18,11 +18,11 @@
     "CHANGELOG.md"
   ],
   "exports": {
-    "review": {
+    "./review": {
       "require": "./lib/review/*.js",
       "import": "./es/review/*.js"
     },
-    "package.json": "./package.json",
+    "./package.json": "./package.json",
     ".": {
       "require": "./lib/review/index.js",
       "import": "./es/review/index.js"

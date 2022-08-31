@@ -18,15 +18,11 @@
     "CHANGELOG.md"
   ],
   "exports": {
-    "./review": {
+    "review": {
       "require": "./lib/review/*.js",
       "import": "./es/review/*.js"
     },
-    ".": {
-      "require": "./lib/*.js",
-      "import": "./es/*.js"
-    },
-    "./package.json": "./package.json"
+    "package.json": "./package.json"
   },
   "scripts": {
     "build:mjs": "tsc",
@@ -38,7 +34,7 @@
     "prepare": "yarn build"
   },
   "dependencies": {
-    "@aomi/common-entity": "^1.0.1",
+    "@aomi/common-entity": "^1.0.2",
     "@nestjs/mongoose": "^9.2.0",
     "mongoose": "^6.5.4"
   },

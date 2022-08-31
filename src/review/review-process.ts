@@ -1,7 +1,8 @@
 import { ReviewStep } from './review-step';
 import { AbstractEntity } from '@aomi/common-entity';
 import { Schema } from '../mongo';
-import { Prop } from '@nestjs/mongoose';
+import { Prop, SchemaFactory } from '@nestjs/mongoose';
+import { Document } from 'mongoose';
 
 /**
  * 审核流程
@@ -26,3 +27,6 @@ export class ReviewProcess extends AbstractEntity {
   @Prop()
   chain: Array<ReviewStep>;
 }
+
+export type ReviewProcessDocument = ReviewProcess & Document;
+export const ReviewProcessSchema = SchemaFactory.createForClass(ReviewProcess);

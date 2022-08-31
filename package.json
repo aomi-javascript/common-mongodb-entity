@@ -1,0 +1,57 @@
+{
+  "name": "@aomi/common-mongodb-entity",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "license": "MIT",
+  "repository": "git@github.com:aomi-javascript/common-mongodb-entity.git",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "src",
+    "es",
+    "lib",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    "./review": {
+      "require": "./lib/review/*.js",
+      "import": "./es/review/*.js"
+    },
+    ".": {
+      "require": "./lib/*.js",
+      "import": "./es/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build:mjs": "tsc",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "yarn clean && yarn format && yarn build:cjs && yarn build:mjs",
+    "clean": "rm -rf es && rm -rf lib",
+    "format": "prettier --write \"src/**/*.[jt]s\"",
+    "release": "semantic-release --debug --ci=false",
+    "prepare": "yarn build"
+  },
+  "dependencies": {
+    "@aomi/common-entity": "^1.0.1",
+    "@nestjs/mongoose": "^9.2.0",
+    "mongoose": "^6.5.4"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "semantic-release": "^19.0.5",
+    "typescript": "^4.8.2"
+  }
+}

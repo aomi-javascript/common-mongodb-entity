@@ -1,7 +1,6 @@
 {
   "name": "@aomi/common-mongodb-entity",
   "version": "1.0.2",
-  "type": "module",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "license": "MIT",
@@ -37,12 +36,9 @@
     "release": "semantic-release --debug --ci=false",
     "prepare": "yarn build"
   },
-  "dependencies": {
+  "devDependencies": {
     "@aomi/common-entity": "^1.0.4",
     "@nestjs/mongoose": "^9.2.0",
-    "mongoose": "^6.5.4"
-  },
-  "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
@@ -50,6 +46,7 @@
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "mongoose": "^6.5.4",
     "prettier": "^2.7.1",
     "semantic-release": "^19.0.5",
     "typescript": "^4.8.2"

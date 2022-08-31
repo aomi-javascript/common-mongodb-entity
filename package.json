@@ -24,8 +24,8 @@
     },
     "./package.json": "./package.json",
     ".": {
-      "require": "./lib/review/index.js",
-      "import": "./es/review/index.js"
+      "require": "./lib/index.js",
+      "import": "./es/index.js"
     }
   },
   "scripts": {
@@ -38,7 +38,7 @@
     "prepare": "yarn build"
   },
   "dependencies": {
-    "@aomi/common-entity": "^1.0.3",
+    "@aomi/common-entity": "^1.0.4",
     "@nestjs/mongoose": "^9.2.0",
     "mongoose": "^6.5.4"
   },

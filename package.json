@@ -22,6 +22,11 @@
       "types": "./types/nestjs/review/*.d.ts",
       "import": "./esm/nestjs/review/*.js"
     },
+    "./nestjs/*": {
+      "require": "./cjs/nestjs/*.js",
+      "types": "./types/nestjs/*.d.ts",
+      "import": "./esm/nestjs/*.js"
+    },
     "./package.json": "./package.json",
     ".": {
       "require": "./cjs/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@aomi/common-data-mongodb",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "license": "MIT",
@@ -34,7 +34,8 @@
     "build": "yarn clean && yarn format && yarn build:cjs && yarn build:esm",
     "clean": "rm -rf esm cjs types",
     "format": "prettier --write \"src/**/*.[jt]s\"",
-    "release": "semantic-release --debug --ci=false"
+    "release": "semantic-release --debug --ci=false",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@aomi/common-data": "^0.0.3",

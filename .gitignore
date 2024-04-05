@@ -1,7 +1,8 @@
 # compiled output
 dist
-lib
-es
+cjs
+esm
+types
 node_modules
 
 # Logs

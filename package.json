@@ -1,10 +1,10 @@
 {
-  "name": "@aomi/common-mongodb-entity",
+  "name": "@aomi/common-data-mongodb",
   "version": "1.0.4",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "license": "MIT",
-  "repository": "git@github.com:aomi-nodejs/common-mongodb-entity.git",
+  "repository": "git@github.com:aomi-nodejs/common-data-mongodb.git",
   "publishConfig": {
     "access": "public"
   },
@@ -34,12 +34,13 @@
     "build": "yarn clean && yarn format && yarn build:cjs && yarn build:esm",
     "clean": "rm -rf esm cjs types",
     "format": "prettier --write \"src/**/*.[jt]s\"",
-    "release": "semantic-release --debug --ci=false",
-    "prepare": "yarn build"
+    "release": "semantic-release --debug --ci=false"
   },
   "devDependencies": {
+    "@aomi/common-data": "^0.0.3",
     "@aomi/common-entity": "^1.0.5",
     "@aomi/typescript-config": "^1.0.1",
+    "@nestjs/common": "^10.3.7",
     "@nestjs/mongoose": "^10.0.4",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",

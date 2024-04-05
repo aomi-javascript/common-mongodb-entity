@@ -1,6 +1,6 @@
 import { ReviewStep } from './review-step';
 import { AbstractEntity } from '@aomi/common-entity';
-import { Schema } from '../mongo';
+import { Schema } from '../../mongo';
 import { Prop, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 

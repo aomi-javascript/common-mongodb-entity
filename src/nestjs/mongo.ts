@@ -1,12 +1,11 @@
-import { Schema as nestjsSchema } from '@nestjs/mongoose';
-import { PropOptions } from '@nestjs/mongoose/dist/decorators/prop.decorator';
-import { Schema as MongooseSchema, Types } from 'mongoose';
-import { SchemaOptions } from '@nestjs/mongoose/dist/decorators/schema.decorator';
+import { PropOptions, Schema as nestjsSchema, SchemaFactory, SchemaOptions } from '@nestjs/mongoose';
+import mongoose, { Schema as MongooseSchema, Types } from 'mongoose';
+import { Type } from '@nestjs/common';
 
 export const Decimal128Options: PropOptions = {
   type: MongooseSchema.Types.Decimal128,
   // 查询时转成字符串
-  get: (v: any) => {
+  get: (v: Function) => {
     return v?.toString();
   },
 };
@@ -33,4 +32,12 @@ export function Schema(options?: SchemaOptions): ClassDecorator {
     ...DefaultSchemeOptions,
     ...options,
   });
+}
+
+Schema.Types = MongooseSchema.Types;
+
+export const AnyScheme = MongooseSchema.Types.Mixed;
+
+export function createForClassProxy<TClass = any>(target: Type<TClass>): mongoose.Schema<TClass> {
+  return SchemaFactory.createForClass(target);
 }
